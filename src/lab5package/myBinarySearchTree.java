@@ -1,17 +1,21 @@
 /**
  * defines the myBinarySearchTree object
  * and defines the add method for myBinarySearchTree objects
+ *
  * @author abigail pitcairn
  * @version 23 october 2023
  */
 
 public class myBinarySearchTree extends BinarySearchTree {
 
-    private int size;
+
+    private Node root;
     private Node right;
     private Node left;
-    private Node root;
+
+    private int size;
     private int data;
+
     private boolean addReturn;
 
     /**
@@ -47,7 +51,7 @@ public class myBinarySearchTree extends BinarySearchTree {
             size++;
             return new Node(item);
         }
-        
+
         else if (localRoot.data == item) {
             addReturn = false;
             return localRoot;

@@ -1,17 +1,37 @@
 /**
- * defines the add method for BinarySearchTree objects
+ * defines the myBinarySearchTree object
+ * and defines the add method for myBinarySearchTree objects
+ *
  * @author abigail pitcairn
  * @version 23 october 2023
  */
 
 public class myBinarySearchTree extends BinarySearchTree {
 
+
+    private Node root;
+    private Node right;
+    private Node left;
+
+    private int size;
+    private int data;
+
     private boolean addReturn;
 
+    /**
+     * construct an object for myBinarySearchTree
+     */
+    myBinarySearchTree(int data) {
+        size = 0;
+        data = null;
+        root = null;
+        right = null;
+        left = null;
+    }
 
     /**
      * add a Node<Integer> to a BinarySearchTree
-     * @param item the Integer to add
+     * @param item the integer to add
      * @return true if added, false if duplicate
      */
     public boolean add(int item){
@@ -22,26 +42,25 @@ public class myBinarySearchTree extends BinarySearchTree {
     /**
      * private helper method for public add method
      * @param localRoot the local root of the tree to add to
-     * @param item the Integer value to add to the tree
-     * @return the new Node<Integer> to add
+     * @param item the integer value to add to the tree
+     * @return the new Node to add
      */
-    private Node<Integer> add(Node<Integer> localRoot, Integer item){
+    private Node add(Node localRoot, Integer item){
         if (localRoot == null){
             addReturn = true;
             size++;
-            Node<Integer> newNode = new Node<Integer>;
-            newNode.data = item;
-            return newNode;
+            return new Node(item);
         }
-        else if (localRoot.data.compareTo(item)==0) {
+
+        else if (localRoot.data == item) {
             addReturn = false;
             return localRoot;
         }
-        else if (localRoot.data.compareTo(item) < 0) {
+        else if (localRoot.data < item) {
             localRoot.left = add(localRoot.left, item);
             return localRoot;
         }
-        else{
+        else {
             localRoot.right = add(localRoot.right, item);
             return localRoot;
         }

@@ -16,9 +16,7 @@ public abstract class BinarySearchTree {
         }
     }
     
-    public abstract boolean add(int data) {
-    
-}
+    public abstract boolean add(int data);
 public int getSize() {
     return size;
     }

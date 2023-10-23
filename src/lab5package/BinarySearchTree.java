@@ -4,12 +4,12 @@ public abstract class BinarySearchTree {
    
     
     protected int size;
-    protected Node root;
+    protected Node<Integer> root;
     
-    protected class Node{
+    protected class Node<Integer>{
         int data;
-        Node left;
-        Node right;
+        Node<Integer> left;
+        Node<Integer> right;
         
         public Node(int a) {
             data = a;

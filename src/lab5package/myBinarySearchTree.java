@@ -34,7 +34,7 @@ public class myBinarySearchTree extends BinarySearchTree {
      * @param item the integer to add
      * @return true if added, false if duplicate
      */
-    public boolean add(Integer item){
+    public boolean add(int item){
         root = add(root,item);
         return addReturn;
     }

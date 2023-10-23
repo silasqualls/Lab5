@@ -14,7 +14,7 @@ public class myBinarySearchTree extends BinarySearchTree {
      * @param item the Integer to add
      * @return true if added, false if duplicate
      */
-    public boolean add(Integer item){
+    public boolean add(int item){
         root = add(root,item);
         return addReturn;
     }
@@ -30,7 +30,7 @@ public class myBinarySearchTree extends BinarySearchTree {
             addReturn = true;
             size++;
             Node<Integer> newNode = new Node<Integer>;
-            newnode.data = item;
+            newNode.data = item;
             return newNode;
         }
         else if (localRoot.data.compareTo(item)==0) {

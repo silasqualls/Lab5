@@ -11,6 +11,10 @@ public abstract class BinarySearchTree {
         Node<Integer> left;
         Node<Integer> right;
         
+        public Node() {
+            
+        }
+        
         public Node(int a) {
             data = a;
         }
